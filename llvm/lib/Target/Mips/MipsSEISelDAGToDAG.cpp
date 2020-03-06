@@ -332,6 +332,7 @@ bool MipsSEDAGToDAGISel::selectAddrRegImm(SDValue Addr, SDValue &Base,
   if (selectAddrFrameIndexOffset(Addr, Base, Offset, 16))
     return true;
 
+/*
   // Operand is a result from an ADD.
   if (Addr.getOpcode() == ISD::ADD) {
     // When loading from constant pools, load the lower address part in
@@ -353,7 +354,8 @@ bool MipsSEDAGToDAGISel::selectAddrRegImm(SDValue Addr, SDValue &Base,
       }
     }
   }
-
+*/
+  
   return false;
 }
 
